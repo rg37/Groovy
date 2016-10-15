@@ -1,0 +1,76 @@
+{
+  "ide": {
+    "onAppLoaded": {
+      "actions": [
+          {
+          "id" : "openWelcomePage",
+          "properties" : {
+            "authenticatedContentUrl" : "https://rawgit.com/groovy-tutorial/codenvy-factory/master/.README.html",
+            "authenticatedTitle" : "Welcome",
+            "nonAuthenticatedContentUrl" : "https://rawgit.com/groovy-tutorial/codenvy-factory/master/.README.html",
+            "nonAuthenticatedTitle" : "Welcome"
+          }
+        }
+      ]
+    },
+    "onProjectOpened": {
+      "actions": [{
+        "properties": {
+          "file": "hello.groovy"
+        },
+        "id": "openFile"
+      }]
+    }
+  },
+  "creator": {
+    "created": 1444952053888,
+    "userId": "usercyx9llxdlfid42lz"
+  },
+  "v": "2.1",
+  "project": {
+    "modules": [],
+    "name": "groovy-runner",
+    "builders": {
+      "configs": {}
+    },
+    "mixinTypes": [],
+    "attributes": {
+    },
+    "visibility": "public",
+    "runners": {
+      "configs": {
+        "project:/docker/groovy-runner": {
+          "ram": 1000,
+          "variables": {
+            "configurationType": "blank"
+          },
+          "options": {}
+        }
+      },
+      "default": "project:/docker/groovy-runner"
+    },
+    "type": "blank",
+    "attributes": {},
+    "description": "A basic environment for running Groovy scripts"
+  },
+  "workspace": {
+    "location": "acceptor",
+    "type": "temp",
+    "resources": {
+        "runnerTimeout": "3600"
+    }
+  },
+  "source": {
+    "project": {
+      "location": "https://github.com/groovy-tutorial/codenvy-factory.git",
+      "type": "git",
+      "parameters": {}
+    },
+    "runners": {
+      "/docker/groovy-runner": {
+        "location": "https://raw.githubusercontent.com/groovy-tutorial/codenvy-factory/master/.factory/Dockerfile"
+      }
+    }
+  },
+  "id": "ywk05vqoj59g5gyl"
+}

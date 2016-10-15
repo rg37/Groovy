@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body style='background-color:white;'>
+	
+<h1 id="welcome">Welcome</h1>
+
+<p>This is a basic Codenvy environment for trying out Groovy scripts.</p>
+
+<p>Activation URL: <a href="https://codenvy.com/f?id=ywk05vqoj59g5gyl">https://codenvy.com/f?id=ywk05vqoj59g5gyl</a></p>
+
+<h2 id="runninggroovyscripts">Running Groovy Scripts</h2>
+
+<p>Once the project is opened in Codenvy, you can start a terminal for running
+Groovy scripts.</p>
+
+<p>To start the terminal, go the the <code>Run</code> menu and select <code>Run</code>.
+You should see a console section starting up in the lower pane of the IDE -
+this is setting up a container with Groovy ready to go.</p>
+
+<p>You can try out Groovy by opening the <code>Terminal</code> tab and typing:</p>
+
+<pre><code>groovy -e &quot;println 'hello, world'&quot;
+</code></pre>
+
+<p>The project files are accessible in the terminal by changing directory to the
+<code>project</code> directory:</p>
+
+<pre><code>cd project
+</code></pre>
+
+<p>You can then try the demo script:</p>
+
+<pre><code>groovy hello.groovy
+</code></pre>
+
+<p>You can start to prepare your own scripts in the IDE by creating new files -
+these will be reflected in the <code>Terminal</code> under the <code>project</code> directory.</p>
+
+<h2 id="importantnotes">Important notes</h2>
+
+<p>The terminal is set to run for 1 hour and will shut-down. If you want to keep
+working in the terminal, just start it again using the <code>Run</code> menu.</p>
+
+<p>You can change the timing through the <code>Configs</code> screen in the <code>Runners</code> panel.
+Open the <code>groovy-runner</code> configuration and edit the line <code>CMD sleep 1h</code> to
+reflect your desired duration.</p>
+
+<p>Running the terminal will use up you allocated Gigabyte hours. <strong>Make sure you
+stop the terminal runner</strong> when you are not using it and before you close the
+IDE.</p>
+
+<p>The Codenvy workspace is temporary and closing the project or browser window
+will cause any changes you&#8217;ve made to be lost. If you&#8217;d like to keep the
+workspace, click on the <code>Persist</code> button in the top-right of the IDE.</p>
+
+<p>For help in using Codenvy, please refer to their <a href="http://docs.codenvy-stg.com/user/">User Guide</a>.</p>
+
+</body>
+</html>

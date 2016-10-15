@@ -1,0 +1,1 @@
+{"mixinTypes":["factory"],"builders":{"configs":{}},"runners":{"configs":{"project:/groovy-runner":{"ram":1000,"variables":{"configurationType":"blank"},"options":{}}},"default":"project:/groovy-runner"},"description":"A basic environment for running Groovy scripts","type":"blank","attributes":{"sourceFactoryId":["ywk05vqoj59g5gyl"]}}
