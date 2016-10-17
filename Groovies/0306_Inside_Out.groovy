@@ -5,8 +5,8 @@ class Point {
   double y;
 }
 class Rectangle {
-	Point upLeft = new Point();
-	Point downRight = new Point();
+    Point upLeft;
+    Point downRight;
 }
 
 Rectangle rectangle = new Rectangle();
@@ -14,12 +14,13 @@ Point point = new Point();
 double minX=0,minY=0, maxX=0,maxY=0;
 
 print '''
-===========================
-=== Rectangles vs Point ===
-===========================
+==========================
+=== Rectangle vs Point ===
+==========================
 
 ''';
 print "enter 1st x co-ordinate >> ";
+rectangle.upLeft = new Point();
 rectangle.upLeft.x=Double.parseDouble(System.console().readLine());
 minX=rectangle.upLeft.x;
 maxX=rectangle.upLeft.x;
@@ -28,6 +29,7 @@ rectangle.upLeft.y=Double.parseDouble(System.console().readLine());
 minY=rectangle.upLeft.y
 minY=rectangle.upLeft.y;
 print "enter 2nd x co-ordinate >> ";
+rectangle.downRight = new Point();
 rectangle.downRight.x=Double.parseDouble(System.console().readLine());
 if (rectangle.downRight.x<minX) {minX=rectangle.downRight.x} else {maxX=rectangle.downRight.x};
 print "enter 2nd y co-ordinate >> ";
