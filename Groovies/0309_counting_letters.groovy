@@ -1,4 +1,4 @@
-//read a string and output it as a column
+//read a string and count letter e in it
 int i=0, countE=0;
 
 print '''
