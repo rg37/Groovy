@@ -10,7 +10,7 @@ class Rectangle {
 }
 
 Rectangle rectangle = new Rectangle();
-double xLenght=0,yLength=0,perimeter=0, area=0;
+double xLength=0,yLength=0,perimeter=0, area=0;
 
 print '''
 ==================
