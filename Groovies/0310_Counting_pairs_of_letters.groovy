@@ -13,17 +13,16 @@ print '''
 Now enter the search string
 >> '''
 while (!finished) {
+    count = 0;
     String smallStr = System.console().readLine();
     if (smallStr == "") {
         finished = true;
         println "==== Finished ====";
     } else {
-        for (i=0;i<bigStr.length();i++) {
+        for (i=0;i<bigStr.length()-smallStr.length()+1;i++) {
             if (bigStr.charAt(i)==smallStr.charAt(0)) {   //found first letter, now check the rest
                 for (j=0;j<smallStr.length(); j++) {             //loop through 2nd string
-                    if (((i+j)>bigStr.length()-1)) {break;}
                     if (!(smallStr.charAt(j)==bigStr.charAt(i+j))) {break;}                        
-		    //print "j: $j      smallstr lenght: ${smallStr.length()-1}"
                     if (j==(smallStr.length()-1)) {count=count+1;}    //ie if it got through whole small string
                 }
             }
