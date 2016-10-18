@@ -25,7 +25,7 @@ class Input {											//let's use a class to store data
   int lengthText;
 
   Boolean inputOK(String strtotest)	{			//method within class to check string entry is not empty
-    if (strtotest = "") {
+    if (strtotest == "") {
       false;
     } else {
       true;
@@ -50,22 +50,22 @@ println();
 println "Please enter some text";
 print ">> ";
 
-str = System.console(),readLine();
+str = System.console().readLine();
 while (!input.inputOK(str)) {										//this tests if input is empty using the class method. if so ask again
-  println "Please enter something >> "
-  str = System.console(),readLine();
+  print "Please enter something >> "
+  str = System.console().readLine();
 }
 
-input.mainText = System.console().readLine();				//main text string into class input
+input.mainText = str;												//main text string into class input
 input.lengthText = input.mainText.length();					//I think in future this could happen within the class. Only dabbling in methods here
 
 println "Enter the first character to find";
 print ">> ";
 
-str = System.console(),readLine();
+str = System.console().readLine();
 while (!input.inputOK(str)) {										//this tests if input is empty using the class method. if so ask again
-  println "Please enter something >> "
-  str = System.console(),readLine();
+  print "Please enter something >> "
+  str = System.console().readLine();
 }
 
 input.checkChar = str.charAt(0);									//takes only the first character of whatever is entered
@@ -73,23 +73,25 @@ input.checkChar = str.charAt(0);									//takes only the first character of wha
 //2. count occurences of charcater in text
 for (i=0;i<input.lengthText;i++) {
   if (input.checkChar == input.mainText.charAt(i)) {
-    count = count++;
+    count++;
   }
 }
 
 //3. output the answer
-println "Your character " + checkChar + " was found in the text " + count + "times."
+println "Your character " + input.checkChar + " was found in the text " + count + " times."
 
-//4. Repeat until same char entered again. this loop could have started before 1st instance but for clarity I have separated it
+//4. Repeat until same char entered again. this loop could have started before 1st instance but for clarity I have separated this step. 
+//   Results in some slightly unnecessary repetition.
 
 input.charList = input.checkChar;								//remember this is my list to know when to stop
 while (!finished) {
+  count=0;																//important to reset this
   println "Enter another character";
   print ">> ";
   str = System.console().readLine();
   while (!input.inputOK(str)) {									//this tests if input is empty using the class method. then loops until good
-  	 println "Please enter something >> "
-    str = System.console(),readLine();
+  	 print "Please enter something >> "
+    str = System.console().readLine();
   }
   input.checkChar = str.charAt(0);
   
@@ -103,12 +105,11 @@ while (!finished) {
     break;
   }
   input.charList = input.charList + input.checkChar;		//add new character to check list
-  for (i=0;i<input.lengthText;i++) {							//do the check
+  for (i=0;i<input.lengthText;i++) {							//do the counting of char
     if (input.checkChar == input.mainText.charAt(i)) {
-    count = count++;
+      count++;
     }
-  println "Your character " + checkChar + " was found in the text " + count + "times."    //output
   }
+  println "Your character " + input.checkChar + " was found in the text " + count + " times."    //output
 }
-
 println "You already tested the character " + input.checkChar + ". Goodbye."
