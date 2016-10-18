@@ -13,16 +13,19 @@ class Input {
   double cost;
   double paid;
 }
-class Output(double denom, double amount) {
-  int quantity(){
-    (amount-this.remain)/denom;
-  }
-  double remain(){
-    amount % denom;
+class Output {
+  int quantity;
+  double remain;
+  
+  Output construct(double denom, double amount) {
+    construct.quanitity=(amount-this.remain)/denom;
+    construct.remain=amount % denom;
   }
 }
+
 double change;
 double[] denom = [50,20,10,5,2,1,0.5,0.2,0.1,0.05,0.02,0.01];
+int i=0;
 Boolean finished=false;
 //1. receive inputs from user
 Input input = new Input();
@@ -41,7 +44,7 @@ if (input.paid<input.cost) {
   print "Your change: "
 }
 while (!finished && i<=denom.size()){
-  output = Output(denom[i],change);
+  output = Output.construct(denom[i],change);
   if (output.quantity>0) {
     println output.quantity + " of " + denom[i];
   }
