@@ -101,10 +101,10 @@ while (!finished) {
       break;
     }											
   }
-  if (finished) {														//maybe unnecessary, will test
+  if (finished) {														//this means it doesn't complete the test for character twice
     break;
   }
-  input.charList = input.charList + input.checkChar;		//add new character to check list
+    input.charList = input.charList + input.checkChar;		//add new character to check list
   for (i=0;i<input.lengthText;i++) {							//do the counting of char
     if (input.checkChar == input.mainText.charAt(i)) {
       count++;
